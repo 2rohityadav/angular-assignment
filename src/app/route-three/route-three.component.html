@@ -1,0 +1,9 @@
+<p>route-three works!</p>
+
+<comp-one [comOne] = "reverseTimerForChild" (childaccess) = "sendDataToChild($event)"></comp-one>
+
+<!-- <comp-one></comp-one> -->
+
+<comp-two [comTwo] = "accessTimer" (reverseTimer) = "reverseParentTimer($event)"></comp-two>
+
+

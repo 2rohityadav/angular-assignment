@@ -1,0 +1,35 @@
+<p>route-five works!</p>
+
+<div class="pb-30">
+  <button (click)="reset()">Reset ↫</button>
+</div>
+
+<div class="buttons pb-30">
+  <button (click)="ascending()">Ascending ↑</button>
+  <button (click)="descending()">Descending ↓</button>
+</div>
+
+<table>
+  <caption>
+    Student Report
+  </caption>
+  <thead>
+    <tr>
+      <th
+        class="tableHeader"
+        *ngFor="let col of headerDetails"
+        (click)="sort(col)"
+      >
+        {{ col }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of isIt ? studentDetails : studentList ">
+      <td>{{ student.ID }}</td>
+      <td>{{ student.Name }}</td>
+      <td>{{ student.Course }}</td>
+      <td>{{ student.Marks }}</td>
+    </tr>
+  </tbody>
+</table>

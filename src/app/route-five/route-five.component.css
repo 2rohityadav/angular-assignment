@@ -1,0 +1,9 @@
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 15rem;
+}
+
+.pb-30{
+  padding-bottom: 30px !important;
+}

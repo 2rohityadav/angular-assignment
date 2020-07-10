@@ -1,0 +1,15 @@
+<select id="sort-by" (change)="sort($event)">
+    <option value="" selected disabled hidden>Sort By</option>
+    <option value="Low">Show Low to High Price</option>
+    <option value="High">Show High to Low Price</option>
+</select>
+
+
+<button type="button" (click) = "onDisplayModeChange('grid')">Grid</button>
+<button type="button" (click) = "onDisplayModeChange('list')">List</button>
+
+<div *ngFor="let product of products" class="product" [ngClass] = "{'grid': displayMode ==='grid'}">
+   <div>productName: {{product.name}}</div><br/>
+    <div>ProductPrice: {{product.price}}</div>
+    <img src="{{product.image}}" alt="{{product.name}}" />
+</div>
